@@ -5,7 +5,7 @@ SET
 @Title      := "Instance Reset";
 
 DELETE FROM `creature_template` WHERE `entry` = @Entry;
-INSERT INTO `creature_template` (`entry`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `rank`, `unit_class`, `unit_flags`, `type`, `type_flags`, `RegenHealth`, `flags_extra`, `ScriptName`) VALUES(@Entry, @Name, @Title, "Speak", 0, 80, 80, 35, 0, 1, 1.14286, 0, 1, 2, 7, 138936390, 1, 2, "mod_npc_services");
+INSERT INTO `creature_template` (`entry`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `rank`, `unit_class`, `unit_flags`, `type`, `type_flags`, `RegenHealth`, `flags_extra`, `ScriptName`) VALUES(@Entry, @Name, @Title, "Speak", 0, 80, 80, 35, 0, 1, 1.14286, 0, 1, 2, 7, 138936390, 1, 2, "npcservices");
 UPDATE `creature_template` SET `npcflag`=`npcflag`|1, `flags_extra`=`flags_extra`|16777216 WHERE `entry`=@Entry;
 
 DELETE FROM `creature_template_model` where creatureid=@Entry;
