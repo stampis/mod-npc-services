@@ -28,18 +28,19 @@ bool NpcServices::OnGossipSelect(Player* player, Creature* /*creature*/, uint32 
     switch (action)
     {
         case 1: // Reset Instances
+        {
             CloseGossipMenuFor(player);
             uint32 diff = 2;
 
-            std::vector<Player *> members;
+            std::vector<Player*> members;
             members.push_back(player);
-            
-            Group *group = player->GetGroup();
+
+            Group* group = player->GetGroup();
             if (group)
             {
-                for (GroupReference *itr = group->GetFirstMember(); itr != nullptr; itr = itr->next())
+                for (GroupReference* itr = group->GetFirstMember(); itr != nullptr; itr = itr->next())
                 {
-                    Player *member = itr->GetSource();
+                    Player* member = itr->GetSource();
                     if (member)
                     {
                         members.push_back(member);
@@ -51,8 +52,8 @@ bool NpcServices::OnGossipSelect(Player* player, Creature* /*creature*/, uint32 
             {
                 for (uint8 j = 0; j < members.size(); ++j)
                 {
-                    Player *member = members[j];
-                    BoundInstancesMap const &m_boundInstances = sInstanceSaveMgr->PlayerGetBoundInstances(member->GetGUID(), Difficulty(i));
+                    Player* member = members[j];
+                    BoundInstancesMap const& m_boundInstances = sInstanceSaveMgr->PlayerGetBoundInstances(member->GetGUID(), Difficulty(i));
                     for (BoundInstancesMap::const_iterator itr = m_boundInstances.begin(); itr != m_boundInstances.end();)
                     {
                         if (itr->first != member->GetMapId())
@@ -69,7 +70,7 @@ bool NpcServices::OnGossipSelect(Player* player, Creature* /*creature*/, uint32 
             ChatHandler(player->GetSession()).SendNotification("|cffFFFFFFInstances reseted!");
             player->CastSpell(player, 59908);
             return true;
-            break;
+        }
 
         case 2:	// BANK
             CloseGossipMenuFor(player);
