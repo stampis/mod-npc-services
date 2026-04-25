@@ -16,7 +16,7 @@ DELETE FROM `creature` WHERE (`id1` = @Entry);
 INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
 (@Entry, 0, 0, 571, 0, 0, 1, 1, 0, 5641.15, 671.146, 651.993, 1.67377, 300, 0, 0, 5342, 0, 0, 0, 0, 0, '', NULL, 0, NULL), -- Dalaran (Eventide)
 (@Entry, 0, 0, 571, 0, 0, 1, 1, 0, 5966, 630.046, 650.627, 4.8625, 300, 0, 0, 5342, 0, 0, 0, 0, 0, '', NULL, 0, NULL), -- Dalaran (Antonidas)
-(@Entry, 0, 0, 0, 0, 0, 1, 65536, 0, -8803.54, 670.785, 96.2018, 4.56429, 300, 0, 0, 5342, 0, 0, 0, 0, 0, '', NULL, 0, NULL), -- Stormwind (Auctionhouse)
+(@Entry, 0, 0, 0, 0, 0, 1, 1, 0, -8803.54, 670.785, 96.2018, 4.56429, 300, 0, 0, 5342, 0, 0, 0, 0, 0, '', NULL, 0, NULL), -- Stormwind (Auctionhouse)
 (@Entry, 0, 0, 0, 0, 0, 1, 1, 0, -4890.18, -983.204, 503.941, 4.76355, 300, 0, 0, 5342, 0, 0, 0, 0, 0, '', NULL, 0, NULL), -- Ironforge (Bank)
 (@Entry, 0, 0, 1, 0, 0, 1, 1, 0, 9929.9, 2506.91, 1318.11, 4.5686, 300, 0, 0, 5342, 0, 0, 0, 0, 0, '', NULL, 0, NULL), -- Darnassus (Bank)
 (@Entry, 0, 0, 1, 0, 0, 1, 1, 0, -7235.16, -3798.66, -1.13841, 5.83534, 300, 0, 0, 5342, 0, 0, 0, 0, 0, '', NULL, 0, NULL), -- Gadgetzan (Auctionhouse)
