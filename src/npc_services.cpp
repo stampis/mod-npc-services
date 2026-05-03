@@ -30,7 +30,7 @@ bool NpcServices::OnGossipSelect(Player* player, Creature* /*creature*/, uint32 
         case 1: // Reset Instances
         {
             CloseGossipMenuFor(player);
-            uint32 diff = 2;
+//            uint32 diff = 2;
 
             std::vector<Player*> members;
             members.push_back(player);
@@ -48,7 +48,7 @@ bool NpcServices::OnGossipSelect(Player* player, Creature* /*creature*/, uint32 
                 }
             }
 
-            for (uint8 i = 0; i < diff; ++i)
+            for (uint8 i = 0; i < MAX_DIFFICULTY; ++i)
             {
                 for (uint8 j = 0; j < members.size(); ++j)
                 {
